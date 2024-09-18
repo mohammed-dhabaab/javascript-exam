@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../main.css">
+    <script src="https://kit.fontawesome.com/91b0893a8f.js" crossorigin="anonymous"></script>
+
+    <style>
+        .profile-wrapper {
+            background-color: var(--light-color);
+            padding: var(--size-32);
+            border-radius: var(--size-10);
+            display: flex;
+            align-items: center;
+            gap: var(--size-20);
+        }
+
+        .user-photo-container {
+            background-color: #95d6ea;
+            padding: var(--size-32);
+            border-radius: 50%;
+        }
+
+        .user-photo {
+            font-size: var(--size-32);
+            color: var(--primary-color);
+        }
+
+        .profile-city-image-container {
+            display: flex;
+            align-items: center;
+            gap: var(--size-6);
+        }
+
+        .user-city-container {
+            display: flex;
+            gap: var(--size-6);
+            align-items: center;
+        }
+
+        .user-city {
+            margin: 0;
+        }
+
+
+        /*  */
+        .prey-wrapper {
+            background-color: var(--light-color);
+            padding: var(--size-32);
+            border-radius: var(--size-10);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prey-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--size-10);
+        }
+
+        .date-container {
+            display: flex;
+            align-items: center;
+            gap: var(--size-6);
+        }
+
+        .date {
+            margin: 0;
+        }
+
+        /*  */
+        .weather-wrapper {
+            background-color: var(--light-color);
+            padding: var(--size-32);
+            border-radius: var(--size-10);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--size-20);
+        }
+
+        .weather-wrapper>* {
+            margin: 0;
+        }
+
+        .temp {
+            font-size: 40px;
+        }
+
+        .weather-sub {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .latitude-longitude-container {
+            display: flex;
+            gap: var(--size-6);
+            font-size: var(--size-12);
+        }
+
+
+        /*  */
+        .preyers-time-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: var(--size-10);
+        }
+
+        .prey-type {
+            text-align: center;
+            background-color: #95d6ea;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 500;
+        }
+
+        .prey-time {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><i class=" logo fa-solid fa-clock"></i></a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div style="display: flex; gap: 20px;">
+                <a onclick="" class="nav-link service none" href="service.html">Service</a>
+                <!-- <a class="nav-link" href="signup.html">Sign Up</a> -->
+            </div>
+            <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+
+
+                </div> -->
+        </div>
+        </div>
+    </nav>
+
+    <section class="outer-wrapper">
+        <div class="profile-wrapper wrapper">
+            <div class="user-photo-container">
+                <i class="user-photo fa-solid fa-user"></i>
+                <!-- <img src="" alt="profile-picture" class="user-photo"> -->
+            </div>
+            <div class="profile-content-container">
+                <h1 class="user-name-title">Mohammed</h1>
+                <div class="profile-city-image-container">
+                    <i class="profile-city-image icon fa-solid fa-city"></i>
+                    <div class="user-city-container">
+                        <p class="user-city">Riyadh </p>
+                        <i onclick="changeCity()" class="edit-icon edit-city-btn fa-solid fa-pen-to-square"></i>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="outer-wrapper">
+        <div class="prey-wrapper wrapper">
+            <!-- <div class="city-image-container">
+                <i class="city-image fa-solid fa-city"></i>
+            </div> -->
+
+            <!-- <div class="prey-content-container">
+
+            </div> -->
+
+            <div class="prey-header">
+                <h2 class="user-city">Riyadh</h2>
+                <div class="date-container">
+                    <p class="date">10-10-2024</p>
+                    <i onclick="changeDateType()" class="change-date-type-btn edit-icon fa-solid fa-rotate"></i>
+                </div>
+            </div>
+            <p class="today-name">Sunday</p>
+            <div class="preyers-time-container">
+            </div>
+        </div>
+    </section>
+
+    <section class="outer-wrapper">
+        <div class="weather-wrapper wrapper">
+            <p class="temp">25°C</p>
+            <div class="humidity-container">
+                <span class="humidity">20%</span>
+                <?xml version="1.0" encoding="utf-8"?><svg width="20" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 109.88 122.88" style="enable-background:new 0 0 109.88 122.88" xml:space="preserve">
+                    <style type="text/css">
+                        .st0 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                        }
+                    </style>
+                    <g>
+                        <path class="st0"
+                            d="M40.45,2.13c3.17,13.57,9.96,25.71,17.08,36.7c1.06-1.6,2.18-3.24,3.33-4.91c6.39-9.34,13.67-19.99,16.5-32.26 c0.26-1.15,1.4-1.86,2.55-1.6c0.82,0.19,1.42,0.82,1.6,1.59c2.85,12.21,10.12,22.86,16.51,32.21c6.35,9.3,11.87,17.39,11.87,25.08 c0,14.27-7.93,23.42-18.07,27.43c-3.53,1.4-7.33,2.16-11.15,2.29C75.43,135.98,0,134.23,0,83.39C0,62.59,32.31,37.36,40.45,2.13 L40.45,2.13z M60.08,42.7c10.49,15.69,20.87,28.96,20.87,40.69c0,0.34-0.02,0.66-0.02,0.99c3.2-0.16,6.37-0.81,9.31-1.98 c8.63-3.41,15.37-11.23,15.37-23.46c0-6.38-5.17-13.96-11.12-22.68c-5.39-7.9-11.39-16.69-15.06-26.72 c-3.66,10.09-9.67,18.88-15.07,26.77C62.87,38.51,61.41,40.64,60.08,42.7L60.08,42.7z M15.81,77.48c-0.2-2.26,1.46-4.25,3.72-4.46 c2.26-0.21,4.25,1.46,4.46,3.72c0.51,5.46,1.7,10.48,3.99,14.82c2.21,4.19,5.48,7.79,10.22,10.57c1.96,1.14,2.61,3.66,1.47,5.61 c-1.15,1.96-3.66,2.61-5.61,1.47c-6.17-3.62-10.45-8.32-13.34-13.82C17.88,90.03,16.42,83.97,15.81,77.48L15.81,77.48L15.81,77.48z" />
+                    </g>
+                </svg>
+            </div>
+            <div class="weather-sub">
+                <p class="user-city">Riyadh</p>
+                <div class="latitude-longitude-container">
+                    <p class="latitude">202.2012</p>
+                    <p class="longitude">202.2012</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script>
+        // Changing City:
+        const userCity = document.querySelectorAll(".user-city")
+        const editCityBtn = document.querySelector(".edit-city-btn")
+        function changeCity() {
+            let userCityInput = prompt("Where are you?");
+            userCityInput === "" ? "Riyadh" : userCityInput
+            userCity.forEach(text => text.innerText = userCityInput)
+            setUserWeather()
+            fetchPrayers()
+        }
+
+        const usersApi = "https://66e87262b17821a9d9dcbf14.mockapi.io/users/signup"
+        const userNameTitle = document.querySelector(".user-name-title")
+        // userNameTitle.innerText = localStorage.getItem()
+        async function setUserName() {
+            try {
+                const res = await fetch(usersApi)
+                const data = await res.json()
+                userNameTitle.innerText = data[Number(localStorage.getItem("userId"))].name
+                console.log(data[Number(localStorage.getItem("userId"))].name)
+
+            } catch (error) {
+                console.log("Error fetch: ", error)
+            }
+
+
+        }
+        setUserName()
+
+
+
+        // adhan
+
+        const dateApi = "https://api.aladhan.com/v1/gToH/"
+        const todayDate = todayDateFormatted()
+        const changeDateTypBtn = document.querySelector(".change-date-type-btn")
+        const date = document.querySelector(".date")
+        const todayName = document.querySelector(".today-name")
+
+        async function fetchDates() {
+            try {
+                const res = await fetch(`${dateApi}${todayDate}`)
+                const data = await res.json()
+
+                return data
+            } catch (error) {
+                console.log("Error fetch: ", error)
+            }
+        }
+        function todayDateFormatted() {
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            let mm = today.getMonth() + 1;
+            let dd = today.getDate();
+
+            if (dd < 10) dd = '0' + dd;
+            if (mm < 10) mm = '0' + mm;
+
+            const formattedToday = dd + '-' + mm + '-' + yyyy;
+            return formattedToday
+        }
+
+
+
+        async function setDate() {
+            const dateObject = await fetchDates()
+            date.innerText = dateObject.data.hijri.date
+
+            let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            todayName.innerText = days[new Date().getDay()]
+        }
+        setDate()
+
+        async function changeDateType() {
+            const dateObject = await fetchDates()
+            const higriDate = dateObject.data.hijri.date
+            date.innerText === higriDate ? date.innerText = todayDate : date.innerText = higriDate
+
+        }
+
+
+        // prayers
+        const userCityFirst = document.querySelector(".user-city")
+        const prayersApi = "https://api.aladhan.com/v1/timingsByAddress/09-03-2015?address=Jeddah,UAE&method=8"
+        const preyersTimeContainer = document.querySelector(".preyers-time-container")
+        async function fetchPrayers() {
+            try {
+                const res = await fetch(`https://api.aladhan.com/v1/timingsByAddress/${todayDate}?address=${userCityFirst.innerText},SA&method=8`)
+                const data = await res.json()
+                preyersTimeContainer.innerHTML = ""
+                let counter = 0
+                for (const [key, value] of Object.entries(data.data.timings)) {
+                    const preyType = document.createElement("div")
+                    const preyerTitle = document.createElement("p")
+                    const preyerTime = document.createElement("p")
+                    preyType.classList.add("prey-type")
+                    preyerTitle.classList.add("prey-title")
+                    preyerTime.classList.add("prey-time")
+                    preyerTitle.innerText = key
+                    preyerTime.innerText = value
+
+                    preyType.appendChild(preyerTitle)
+                    preyType.appendChild(preyerTime)
+                    preyersTimeContainer.appendChild(preyType)
+
+                    counter += 1
+                    if (counter === 7) {
+                        break
+                    }
+                }
+                return data
+            } catch (error) {
+                console.log("Error fetch: ", error)
+            }
+        }
+        fetchPrayers()
+
+
+        //Weather
+        const apiKey = "9120d8e27b0de37a09d8de65637fd659"
+        const weatherApi = "https://api.openweathermap.org/data/2.5/weather?"
+        // const targetedCity = "Riyadh"
+        async function fetchWeatherData(targetedCity = "Riyadh") {
+            try {
+                const res = await fetch(`${weatherApi}q=${targetedCity}&units=metric&appid=${apiKey}`)
+                const data = await res.json()
+
+                return data
+            } catch (error) {
+                console.log("Error fetch: ", error)
+            }
+        }
+
+        const temp = document.querySelector(".temp")
+        const humidity = document.querySelector(".humidity")
+        const latitude = document.querySelector(".latitude")
+        const longitude = document.querySelector(".longitude")
+        async function setUserWeather() {
+            const data = await fetchWeatherData(userCityFirst.innerText)
+            temp.innerText = Math.round(data.main.temp) + "°C"
+            humidity.innerText = data.main.humidity + "%"
+            latitude.innerText = data.coord.lon
+            longitude.innerText = data.coord.lat
+        }
+        setUserWeather()
+
+    </script>
+</body>
+
+</html>
