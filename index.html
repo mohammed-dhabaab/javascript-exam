@@ -83,10 +83,12 @@
             logBtn.classList.remove("none")
         }
 
-        if (localStorage.getItem("allow")) {
+        if (localStorage.getItem("allow") === "false") {
             logoutbtn.classList.add("none")
         } else {
             logoutbtn.classList.remove("none")
+            singBtn.classList.add("none")
+            logBtn.classList.add("none")
         }
     </script>
 </body>
