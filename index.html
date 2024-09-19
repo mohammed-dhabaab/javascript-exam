@@ -13,6 +13,21 @@
     <link rel="stylesheet" href="main.css">
 
     <script src="https://kit.fontawesome.com/91b0893a8f.js" crossorigin="anonymous"></script>
+    <style>
+        .nav-link {
+            padding: 4px 10px;
+            border-radius: 40px;
+        }
+
+        .nav-link:hover {
+            background-color: #528ab4;
+            color: white;
+        }
+
+        .log-out-btn {
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -25,7 +40,9 @@
             </button> -->
             <div style="display: flex; gap: 20px;">
                 <a onclick="" class="nav-link service none" href="service.html">Service</a>
-                <a class="nav-link" href="signup.html">Sign Up</a>
+                <a class="nav-link sing-btn" href="signup.html">Sign Up</a>
+                <a class="nav-link log-btn" href="login.html">Log In</a>
+                <button onclick="logout()" class="log-out-btn"><i class="fa-solid fa-right-from-bracket"></i></button>
 
             </div>
             <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -55,6 +72,21 @@
         } else {
             service.classList.add("none")
         }
+
+        const singBtn = document.querySelector(".sing-btn")
+        const logBtn = document.querySelector(".log-btn")
+        const logoutbtn = document.querySelector(".log-out-btn")
+
+        function logout() {
+            localStorage.setItem("allow", "false")
+            singBtn.classList.remove("none")
+            logBtn.classList.remove("none")
+        }
+
+        if (localStorage.getItem("allow")) {
+            logoutbtn.classList.add("none")
+
+        } 
     </script>
 </body>
 

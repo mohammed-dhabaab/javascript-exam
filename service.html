@@ -154,6 +154,10 @@
         .longitude {
             margin: 0;
         }
+
+        .log-out-btn {
+            color: var(--primary-color);
+        }
     </style>
 </head>
 
@@ -169,6 +173,7 @@
                 <a onclick="" class="nav-link service none" href="service.html">Service</a>
                 <!-- <a class="nav-link" href="signup.html">Sign Up</a> -->
             </div>
+            <button onclick="logout()" class="log-out-btn"><i class="fa-solid fa-right-from-bracket"></i></button>
             <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
 
@@ -257,6 +262,12 @@
 
 
     <script>
+        function logout() {
+            localStorage.setItem("allow", "false")
+            window.location.href = "index.html"
+        }
+
+
         // Changing City:
         const userCity = document.querySelectorAll(".user-city")
         const editCityBtn = document.querySelector(".edit-city-btn")
