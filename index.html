@@ -85,8 +85,9 @@
 
         if (localStorage.getItem("allow")) {
             logoutbtn.classList.add("none")
-
-        } 
+        } else {
+            logoutbtn.classList.remove("none")
+        }
     </script>
 </body>
 
